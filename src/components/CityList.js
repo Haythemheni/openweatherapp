@@ -44,7 +44,7 @@ const CityList = () => {
             
             <div key={idx} className="column is-one-quarter">
             <div 
-              className="card"
+              className="card city-card"
               style={{ cursor: 'pointer' }}
               onClick={() => handleCityClick(cityWeather.name)}
             >
@@ -55,6 +55,7 @@ const CityList = () => {
                 <p className="subtitle">{cityWeather.name}</p>
                 <p className="subtitle">Wind Speed: {cityWeather.wind.speed}m/s</p>
               </div>
+              <div className="more-details">More details</div>
             </div>
           </div>
         ))
