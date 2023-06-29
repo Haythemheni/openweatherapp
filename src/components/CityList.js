@@ -58,10 +58,13 @@ const CityList = () => {
             </div>
           </div>
         ))
-      ) : <div>hhhh </div>}
+      ) : null}
    <div className={`modal ${isModalOpen ? 'is-active' : ''}`}>
         <div className="modal-background" onClick={closeModal}></div>
         <div className="modal-content">
+            <header className="modal-header"> 
+                <h2 className="has-text-centered">{forecastData.city && forecastData.city.name}</h2>  
+            </header>
           <div className="columns is-multiline">
           {cityForecast && cityForecast.map((forecast, idx) =>{
               const date = new Date(forecast.dt_txt);
