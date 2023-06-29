@@ -70,8 +70,8 @@ const CityList = () => {
                   <div className="card modal-card"> 
                     <div className="has-text-centered modal-card-content"> 
                       <p className="title modal-title">{date.toLocaleDateString()} {date.toLocaleTimeString()}</p> 
-                      <p className="modal-subtitle">Temperature: {forecast.main.temp}K</p> 
-                      <p className="modal-subtitle">Wind Speed: {forecast.wind.speed}m/s</p> 
+                      <p className="modal-subtitle">Temperature: <b>{Math.ceil(forecast.main.temp)}°C</b></p> 
+                      <p className="modal-subtitle">Wind Speed: <b>{forecast.wind.speed}m/s</b> </p> 
                     </div>
                   </div>
                 </div>
