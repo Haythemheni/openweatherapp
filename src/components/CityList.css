@@ -1,0 +1,89 @@
+body{
+  background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  font-family: 'Lato', sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.columns {
+  justify-content: center;
+}
+
+.column.is-one-quarter {
+  margin: 1em;
+}
+
+.card {
+  border-radius: 0.5em;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  color: #4a4a4a;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.card-content {
+  flex-grow: 1;
+  padding: 1.5em;
+  background-color: red;
+  text-align: center;
+  .title {
+    font-family: 'Lato', sans-serif;
+    color: #B8B8B8;
+    font-weight:100;
+    font-size:80px;
+  }
+  .subtitle {
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    font-size:28px;
+  }
+}
+.card-content >img { 
+  height: 100px;
+  width: 100px;
+}
+
+
+/* CityList.css */
+
+.modal-content {
+  padding: 2rem;
+  background: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+}
+
+.modal-card {
+  background-color: #f5f5f5;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+}
+
+.modal-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.2), 0 0 0 1px rgba(10, 10, 10, 0.02);
+}
+
+.modal-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-card-content .modal-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+.modal-card-content .modal-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0.5em;
+}
