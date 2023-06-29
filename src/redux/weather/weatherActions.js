@@ -50,7 +50,7 @@ export const fetchForecastFailure = (error) => ({
 export const fetchForecast = (city) => {
   return (dispatch) => {
     dispatch(fetchForecastStart());
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=12607d73c09bffa42c081d069df29e31&units=metric`)
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=a4d36cd4aa170037a202388da489d625&units=metric`)
       .then((res) => res.json())
       .then((data) => {
         dispatch(fetchForecastSuccess(data));
