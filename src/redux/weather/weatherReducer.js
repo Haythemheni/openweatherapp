@@ -10,7 +10,7 @@ import {
   const initialState = {
     loading: false,
     weather: [],
-    forecast: {}, // Add this line
+    forecast: {}, 
     error: '',
   };
   
@@ -33,18 +33,18 @@ import {
           loading: false,
           error: action.payload,
         };
-      case FETCH_FORECAST_START: // Add this case
+      case FETCH_FORECAST_START: 
         return {
           ...state,
           loading: true,
         };
-      case FETCH_FORECAST_SUCCESS: // Add this case
+      case FETCH_FORECAST_SUCCESS: 
         return {
           ...state,
           loading: false,
           forecast: action.payload,
         };
-      case FETCH_FORECAST_FAILURE: // Add this case
+      case FETCH_FORECAST_FAILURE: 
         return {
           ...state,
           loading: false,

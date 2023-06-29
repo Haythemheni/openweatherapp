@@ -16,10 +16,9 @@ const CityList = () => {
 
   useEffect(() => {
     cities.forEach((city) => dispatch(fetchWeather(city)));
-  }, [dispatch]); // remove cities from the dependency array
+  }, [dispatch]); 
 
-   // Observe changes in forecastData.list and update cityForecast
-   useEffect(() => {
+  useEffect(() => {
     if (forecastData && forecastData.list) {
       setCityForecast(forecastData.list.slice(0, 4));
     }
@@ -62,18 +61,17 @@ const CityList = () => {
       ) : <div>hhhh </div>}
    <div className={`modal ${isModalOpen ? 'is-active' : ''}`}>
         <div className="modal-background" onClick={closeModal}></div>
-        <div className='modal-header'>ggg </div>
         <div className="modal-content">
           <div className="columns is-multiline">
           {cityForecast && cityForecast.map((forecast, idx) =>{
               const date = new Date(forecast.dt_txt);
               return (
                 <div key={idx} className="column is-one-quarter">
-                  <div className="card modal-card">  {/* Notice the class name change */}
-                    <div className="has-text-centered modal-card-content"> {/* Notice the class name change */}
-                      <p className="title modal-title">{date.toLocaleDateString()} {date.toLocaleTimeString()}</p> {/* Notice the class name change */}
-                      <p className="modal-subtitle">Temperature: {forecast.main.temp}K</p> {/* Notice the class name change */}
-                      <p className="modal-subtitle">Wind Speed: {forecast.wind.speed}m/s</p> {/* Notice the class name change */}
+                  <div className="card modal-card"> 
+                    <div className="has-text-centered modal-card-content"> 
+                      <p className="title modal-title">{date.toLocaleDateString()} {date.toLocaleTimeString()}</p> 
+                      <p className="modal-subtitle">Temperature: {forecast.main.temp}K</p> 
+                      <p className="modal-subtitle">Wind Speed: {forecast.wind.speed}m/s</p> 
                     </div>
                   </div>
                 </div>
